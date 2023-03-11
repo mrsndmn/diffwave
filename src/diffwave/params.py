@@ -34,13 +34,13 @@ class AttrDict(dict):
 
 params = AttrDict(
     # Training params
-    batch_size=16,
-    learning_rate=2e-4,
+    batch_size=8,
+    learning_rate=1e-4,
     max_grad_norm=None,
 
     # Data params
-    sample_rate=22050,
-    n_mels=80,
+    sample_rate=44100,
+    n_mels=128,
     n_fft=1024,
     hop_samples=256,
     crop_mel_frames=62,  # Probably an error in paper.
