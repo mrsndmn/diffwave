@@ -34,6 +34,18 @@ def transform(filename):
     if params.sample_rate != sr:
       audio = T.functional.resample(audio, orig_freq=sr, new_freq=params.sample_rate)
 
+
+    # n_fft=params.n_fft,
+    # hop_length=params.hop_length,
+    # win_length=params.win_length,
+    # pad=0,
+    # window_fn=torch.hann_window,
+    # power=None,
+    # normalized=False,
+    # wkwargs=None,
+    # center=True,
+    # pad_mode="reflect",
+    # onesided=True,
     mel_args = {
         'sample_rate': sr,
         'win_length': params.hop_samples * 4,
